@@ -37,22 +37,22 @@ Tested conceptually on Ubuntu/Debian-style systems.
 
    ```bash
    sudo apt update
-   sudo apt install build-essential cmake qt6-base-dev qt6-tools-dev qt6-tools-dev-tools libqt6widgets6 libqt6core6 libqt6gui6```
+   sudo apt install build-essential cmake qt6-base-dev qt6-tools-dev qt6-tools-dev-tools libqt6widgets6 libqt6core6 libqt6gui6
 
 2. **Clone the repository**
-```git clone https://github.com/PiezoGo/NotePied.git
-cd NotePied```
+``git clone https://github.com/PiezoGo/NotePied.git
+   cd NotePied``
 
 
 3. **Build the application**
-```mkdir build && cd build
+``mkdir build && cd build
 cmake ..
-make -j$(nproc)```
+make -j$(nproc)``
 
 This should produce an executable named something like NotePied (check with ls after building; look in CMakeLists.txt for the exact add_executable target name).
 
 4. **Run it**
-```./NotePied```
+``./NotePied``
 
 ## Contributing
 
