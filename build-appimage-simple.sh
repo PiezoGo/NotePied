@@ -47,8 +47,7 @@ fi
 
 # Bundle Qt libraries
 echo "Bundling Qt libraries..."
-./linuxdeployqt.AppImage AppDir/usr/share/applications/NotePied.desktop -appimage
-
+./linuxdeployqt.AppImage AppDir/usr/share/applications/NotePied.desktop -appimage -unsupported-allow-new-glibc
 # Rename to simpler name
 mv NotePied*.AppImage NotePied-Linux-x86_64.AppImage
 
