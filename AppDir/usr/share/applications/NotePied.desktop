@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=NotePied
+Comment=A modern note-taking application
+Exec=NotePied
+Icon=notepied
+Categories=Utility;Office;
+Terminal=false
+StartupNotify=true

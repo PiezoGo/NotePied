@@ -1,35 +1,43 @@
-cmake_minimum_required(VERSION 3.19)
-project(NotePied LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.10)
+project(NotePied VERSION 1.0.0 LANGUAGES CXX)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-qt_standard_project_setup()
+# Find Qt5
+find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
 
-qt_add_executable(NotePied
-    WIN32 MACOSX_BUNDLE
+# List EXACT files you have
+set(SOURCES
     main.cpp
     mainwindow.cpp
+)
+
+set(HEADERS
     mainwindow.h
+)
+
+set(FORMS
     mainwindow.ui
 )
 
-target_link_libraries(NotePied
-    PRIVATE
-        Qt::Core
-        Qt::Widgets
+set(RESOURCES
+    resources.qrc
 )
 
-include(GNUInstallDirs)
+# Create executable
+add_executable(NotePied ${SOURCES} ${HEADERS} ${FORMS} ${RESOURCES})
 
-install(TARGETS NotePied
-    BUNDLE  DESTINATION .
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+# Link Qt libraries
+target_link_libraries(NotePied 
+    Qt5::Core
+    Qt5::Gui
+    Qt5::Widgets
 )
 
-qt_generate_deploy_app_script(
-    TARGET NotePied
-    OUTPUT_SCRIPT deploy_script
-    NO_UNSUPPORTED_PLATFORM_ERROR
-)
-install(SCRIPT ${deploy_script})
+# Install for AppImage
+install(TARGETS NotePied DESTINATION bin)

@@ -1,10 +1,9 @@
 [Desktop Entry]
-Version=1.0
 Type=Application
 Name=NotePied
-Comment=A lightweight private note-taking app
-Exec=/home/piezo/Desktop/NotePied/build/Desktop_Qt_6_10_2-Debug/NotePied  # ← Change this to the actual path after building, e.g. /home/michael/NotePied/build/NotePied
-Icon=note-pied  # ← See icon step below; can be a full path or icon name
+Comment=A modern note-taking application
+Exec=NotePied
+Icon=notepied
+Categories=Utility;Office;
 Terminal=false
-Categories=Utility;TextEditor;
-StartupWMClass=NotePied  # Helps with window grouping; match your app's WM_CLASS if needed
+StartupNotify=true
