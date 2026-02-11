@@ -4,6 +4,6 @@ Name=NotePied
 Comment=A modern note-taking application
 Exec=NotePied
 Icon=notepied
-Categories=Utility;Office;
+Categories=Utility;
 Terminal=false
 StartupNotify=true

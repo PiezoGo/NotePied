@@ -10,6 +10,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+// In MainWindow::MainWindow(QWidget *parent), after ui->setupUi(this);
+
+// Set explicit icons for toolbar actions
+ui->actionNew->setIcon(QIcon::fromTheme("document-new"));
+ui->actionOpen->setIcon(QIcon::fromTheme("document-open"));
+ui->actionSave->setIcon(QIcon::fromTheme("document-save"));
+ui->actionSave_As->setIcon(QIcon::fromTheme("document-save-as"));
+ui->actionCut->setIcon(QIcon::fromTheme("edit-cut"));
+ui->actionCopy->setIcon(QIcon::fromTheme("edit-copy"));
+ui->actionPaste->setIcon(QIcon::fromTheme("edit-paste"));
+ui->actionUndo->setIcon(QIcon::fromTheme("edit-undo"));
+ui->actionRedo->setIcon(QIcon::fromTheme("edit-redo"));
+ui->actionAbout->setIcon(QIcon::fromTheme("help-about"));
     //QToolBar *toolbar = addToolBar("Main Toolbar");
     this->setCentralWidget(ui->textEdit);
 }

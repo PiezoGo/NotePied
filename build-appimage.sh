@@ -59,8 +59,7 @@ chmod +x AppDir/usr/bin/NotePied
 
 # Use linuxdeployqt to bundle Qt libraries
 echo "Running linuxdeployqt to bundle Qt libraries..."
-linuxdeployqt AppDir/usr/share/applications/NotePied.desktop -appimage
-
+linuxdeployqt AppDir/usr/share/applications/NotePied.desktop -appimage -unsupported-allow-new-glibc
 # The AppImage will have a long name, let's rename it
 echo "Renaming AppImage..."
 mv NotePied*.AppImage NotePied-x86_64.AppImage
