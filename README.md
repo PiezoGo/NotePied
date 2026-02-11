@@ -1,67 +1,25 @@
 # NotePied
 
-**NotePied** is a basic desktop note-taking tool with a modern Qt interface.  
-Perfect for quick thoughts, lists, and plain-text editing.
+A modern, lightweight note-taking application for Linux.
 
-- **Private & offline** — no cloud, no tracking
-- **Lightweight** C++ + Qt application
-- **Simple GUI** powered by Qt Designer (.ui file)
+## 📥 Download & Run (No Installation!)
 
-![NotePied Icon / Preview](note-pied.png)
+1. Download `NotePied-x86_64.AppImage` from [Releases](https://github.com/PiezoGo/NotePied/releases)
+2. `chmod +x NotePied-x86_64.AppImage`
+3. `./NotePied-x86_64.AppImage`
 
-## Current Status
-- Personal / early-stage project
-- Source code is public
-- **No pre-built binaries or official releases** yet (check back later for AppImage, Windows .exe, etc.)
-- Build from source is straightforward on Linux
+**Linux only.** Windows/macOS versions coming later.
 
-**Topics:** c, cpp, qt, qtcreator, desktop-application
+## Features
+- Clean Qt5 interface
+- Create, edit, save notes
+- Portable AppImage - no dependencies!
 
-## Features (based on current implementation)
-- Clean, minimal note-taking window
-- Text editing capabilities (via Qt widgets)
-- Embedded resources (icons, etc. via resources.qrc)
-- Linux desktop integration support (via NotePied.desktop)
-
-## Requirements (Linux)
-- **CMake** ≥ 3.10
-- **Qt 6** development packages (or Qt 5 – adjust as needed)
-- C++ compiler (g++, clang++)
-- git (to clone)
-
-Tested conceptually on Ubuntu/Debian-style systems.
-
-## How to Build and Run on Linux
-
-1. **Install dependencies** (Ubuntu/Debian example)
-
-   ```bash
-   sudo apt update
-   sudo apt install build-essential cmake qt6-base-dev qt6-tools-dev qt6-tools-dev-tools libqt6widgets6 libqt6core6 libqt6gui6
-
-2. **Clone the repository**
-``git clone https://github.com/PiezoGo/NotePied.git
-   cd NotePied``
-
-
-3. **Build the application**
-``mkdir build && cd build
-cmake ..
-make -j$(nproc)``
-
-This should produce an executable named something like NotePied (check with ls after building; look in CMakeLists.txt for the exact add_executable target name).
-
-4. **Run it**
-``./NotePied``
-
-## Contributing
-
-Contributions are welcome! You can:
-
-- Open issues
-
-- Send pull requests
-
-- Add features or docs
-
-Please follow good commit practices.
+## Build from Source
+```bash
+git clone https://github.com/PiezoGo/NotePied.git
+cd NotePied
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j$(nproc)
+./NotePied
