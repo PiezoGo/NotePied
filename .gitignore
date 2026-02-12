@@ -1,82 +1,169 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 
-*~
-*.autosave
-*.a
-*.core
-*.moc
+# === Build Artifacts ===
+build*/
+Build*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+*-build-*
+*-build-desktop/
+debug/
+release/
+out/
+cmake-build-*/
+
+# === AppImage Specific ===
+*.AppImage
+*.AppImage.*
+AppDir/
+NotePied.AppDir/
+squashfs-root/
+linuxdeployqt*.AppImage
+appimagetool*.AppImage
+*.AppImage.home
+*.AppImage.config
+deploy.log
+
+# === Compiled Object Files ===
 *.o
 *.obj
-*.orig
-*.rej
+*.a
 *.so
 *.so.*
-*_pch.h.cpp
-*_resource.rc
-*.qm
-.#*
-*.*#
-core
-!core/
-tags
-.DS_Store
-.directory
-*.debug
-Makefile*
-*.prl
+*.dll
+*.exe
+*.lib
+*.dylib
+*.dSYM/
+*.out
 *.app
+
+# === Qt Generated Files ===
 moc_*.cpp
+moc_*.h
 ui_*.h
 qrc_*.cpp
-Thumbs.db
-*.res
-*.rc
+*.moc
+*.qrc.depends
+*.qrc.depends.*
+*.qm
+*.prl
+*_pch.h.cpp
+*_resource.rc
 /.qmake.cache
 /.qmake.stash
 
-# qtcreator generated files
-*.pro.user*
-*.qbs.user*
-CMakeLists.txt.user*
+# === Qt Creator ===
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.creator
+*.creator.user
+*.creator.user.*
+*.files
+*.includes
+*.config
+*.cflags
+*.cxxflags
+.qtc_clangd/
+.qtc_debug/
+.qt/
+.qtc_clangd/
 
-# xemacs temporary files
-*.flc
+# === CMake ===
+CMakeUserPresets.json
+CTestTestfile.cmake
+_cmake/
+cmake_install.cmake
+Makefile
+CMakeFiles/
 
-# Vim temporary files
-.*.swp
-
-# Visual Studio generated files
-*.ib_pdb_index
-*.idb
-*.ilk
-*.pdb
-*.sln
-*.suo
-*.vcproj
-*vcproj.*.*.user
-*.ncb
-*.sdf
-*.opensdf
-*.vcxproj
-*vcxproj.*
-
-# MinGW generated files
-*.Debug
-*.Release
-
-# Python byte code
-*.pyc
-
-# Binaries
-# --------
-*.dll
-*.exe
-
-# Directories with generated files
+# === Directories with generated files ===
 .moc/
 .obj/
 .pch/
 .rcc/
 .uic/
-/build*/
+.qtc_clangd/
+
+# === Backup & Temp Files ===
+*~
+.*.swp
+.*.swo
+*.autosave
+*.orig
+*.rej
+*.bak
+*.old
+*.tmp
+*.temp
+*.cache
+*.pid
+*.seed
+*.pid.lock
+.#*
+*.*#
+core
+!core/
+
+# === IDEs ===
+.vscode/
+.idea/
+.project
+.classpath
+.cproject
+.settings/
+
+# === System Files ===
+.DS_Store
+.directory
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# === Logs ===
+*.log
+*.log.*
+
+# === Archives (should not be in repo) ===
+*.tar
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# === Python (if any) ===
+*.pyc
+__pycache__/
+
+# === Tags ===
+tags
+TAGS
+cscope.*
+GTAGS
+GPATH
+GRTAGS
+GSYMS
+
+# === Keep these essential files ===
+!README.md
+!LICENSE
+!NotePied.desktop
+!note-pied.png
+!screenshots/
+!screenshots/mainwin.png
+!*.cpp
+!*.h
+!*.ui
+!*.qrc
+!CMakeLists.txt
+!build-appimage*.sh
+!docker-build*.sh
+!create-release.sh
+!.gitignore
